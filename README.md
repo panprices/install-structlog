@@ -4,7 +4,7 @@ A script for getting the latest panprices structlog config into your python proj
 
 ## How to setup
 
-Run `npm install` to install the dependencies.
+Run `npm install` to install the dependencies. Please use prettier to format your code.
 
 ## How to test
 

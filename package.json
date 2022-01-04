@@ -3,12 +3,15 @@
   "version": "0.0.0-semantically-released",
   "description": "A script for getting the latest panprices structlog config into your python project",
   "main": "dist/index.js",
+  "bin": {
+    "tran": "./bin/index.js"
+  },
   "private": false,
   "publishConfig": {
     "access": "public"
   },
   "scripts": {
-    "test": "npm run build && node .",
+    "test": "npm run build && node ./bin/index.js",
     "build": "tsc",
     "semantic-release": "semantic-release"
   },

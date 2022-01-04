@@ -2,6 +2,12 @@
 
 A script for getting the latest panprices structlog config into your python project.
 
+Use it by running:
+
+```
+npx @panprices/install-structlog
+```
+
 ## How to setup
 
 Run `npm install` to install the dependencies. Please use prettier to format your code.

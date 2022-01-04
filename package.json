@@ -1,0 +1,36 @@
+{
+  "name": "install-structlog",
+  "version": "1.0.0",
+  "description": "A script for getting the latest panprices structlog config into your python project",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "npm run build && node .",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/panprices/install-structlog.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/panprices/install-structlog/issues"
+  },
+  "homepage": "https://github.com/panprices/install-structlog#readme",
+  "dependencies": {
+    "@types/yargs": "^17.0.8",
+    "chalk": "^4.1.0",
+    "prettier": "^2.5.1",
+    "typescript": "^4.5.4",
+    "yargs": "^17.3.1"
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true,
+    "trailingComma": "all"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.7"
+  }
+}

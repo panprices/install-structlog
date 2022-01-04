@@ -4,7 +4,7 @@
   "description": "A script for getting the latest panprices structlog config into your python project",
   "main": "dist/index.js",
   "bin": {
-    "tran": "./bin/index.js"
+    "@panprices/install-structlog": "./bin/index.js"
   },
   "private": false,
   "publishConfig": {

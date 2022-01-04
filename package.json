@@ -4,6 +4,9 @@
   "description": "A script for getting the latest panprices structlog config into your python project",
   "main": "dist/index.js",
   "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "test": "npm run build && node .",
     "build": "tsc",

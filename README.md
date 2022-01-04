@@ -1,5 +1,7 @@
 # install-structlog
 
+![npm-badge](https://img.shields.io/npm/v/@panprices/install-structlog)
+
 A script for getting the latest panprices structlog config into your python project.
 
 Use it by running:

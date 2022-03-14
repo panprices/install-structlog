@@ -16,16 +16,15 @@ function main() {
 
   console.log(chalk.green('\n[script] Running struclog installer!\n'))
 
-  // # Step: Install structlog and rich (optional)
+  // # Step: Install structlog
   if (argv['skip-install']) {
     console.log(
-      chalk.yellow('\n[script] Skipping structlog and rich installation\n'),
+      chalk.yellow('\n[script] Skipping structlog installation\n'),
     )
   } else {
-    console.log(chalk.green('\n[script] Installing structlog and rich\n'))
+    console.log(chalk.green('\n[script] Installing structlog\n'))
     const { execSync } = require('child_process')
     execSync('pipenv install structlog', { stdio: 'inherit' })
-    execSync('pipenv install --dev rich', { stdio: 'inherit' })
   }
 
   // # Step: Copy structlog to current working directory

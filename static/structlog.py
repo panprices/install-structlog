@@ -24,7 +24,6 @@ def config_structlog():
                 StackInfoRenderer(),
                 set_exc_info,
                 _GCP_severity_processor,
-                _GCP_display_message_processor,
                 structlog.processors.JSONRenderer(),
             ]
         )
@@ -53,21 +52,4 @@ def _GCP_severity_processor(
     """
     event_dict["severity"] = method_name.upper()
     del event_dict["level"]
-    return event_dict
-
-
-def _GCP_display_message_processor(
-    logger: Any,
-    method_name: str,
-    event_dict: Any,
-) -> Any:
-    """
-    Add display message to event_dict.
-
-    By default GCP logs will just show a string representation of the full blob.
-
-    To show the message only you can use this processor.
-    """
-    event_dict["message"] = event_dict["event"]
-    del event_dict["event"]
     return event_dict

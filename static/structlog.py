@@ -1,5 +1,7 @@
+import logging
 import os
 from typing import Any
+
 import structlog
 from structlog.dev import set_exc_info, ConsoleRenderer
 from structlog.processors import StackInfoRenderer, TimeStamper, add_log_level
@@ -15,7 +17,8 @@ def config_structlog():
                 set_exc_info,
                 TimeStamper(fmt="%Y-%m-%d %H:%M.%S", utc=False),
                 ConsoleRenderer(),
-            ]
+            ],
+            wrapper_class=structlog.make_filtering_bound_logger(logging.DEBUG),
         )
     else:
         structlog.configure_once(
@@ -25,7 +28,8 @@ def config_structlog():
                 set_exc_info,
                 _GCP_severity_processor,
                 structlog.processors.JSONRenderer(),
-            ]
+            ],
+            wrapper_class=structlog.make_filtering_bound_logger(logging.INFO),
         )
 
 
